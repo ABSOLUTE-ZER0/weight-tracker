@@ -1,0 +1,74 @@
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Colors *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+// Dark Color Palette (Custom Properties)
+html {
+  --color-background-main: rgb(0, 0, 0);
+  --color-background-main-m: rgba(0, 0, 0, 0.65);
+  --color-hover: rgb(63, 185, 52);
+  --color-hover-m: rgba(63, 185, 52, 0.65);
+  --color-active: rgb(255, 72, 0);
+  --color-active-m: rgba(255, 72, 0, 0.65);
+  --color-white: white;
+  --color-white-m: rgba(255, 255, 255, 0.5);
+  --color-black: black;
+  --color-black-m: rgba(0, 0, 0, 0.5);
+  --color-text: rgb(255, 255, 255);
+  --color-text-m: rgba(255, 255, 255, 0.5);
+  --color-card: rgb(35, 35, 35);
+  --color-card-border: rgba(255, 255, 255, 0.125);
+  --color-metadata: rgb(202, 189, 0);
+  --color-sidebar-tab: rgb(65, 65, 65);
+
+  --color-categories-1: rgb(0, 168, 22);
+  --color-categories-2: rgb(193, 126, 255);
+  --color-categories-3: rgb(228, 83, 0);
+  --color-categories-hover: rgba(0, 0, 0, 0.692);
+
+  --color-contact-filter: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 90%,
+    rgba(0, 0, 0, 0.8) 90%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Weights *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$font-weights: (
+  "font-weight-thin": 100,
+  "font-weight-light": 300,
+  "font-weight-regular": 400,
+  "font-weight-medium": 600,
+  "font-weight-bold": 700,
+);
+
+@function font-weight($font-weight-style) {
+  @return map-get($font-weights, $font-weight-style);
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Sizes *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$font-sizes: (
+  "font-size-xsmall": calc(1rem + 0.25vw),
+  "font-size-small": calc(1.2rem + 0.5vw),
+  "font-size-regular": calc(1.5rem + 1vw),
+  "font-size-medium": calc(1.5rem + 2vw),
+  "font-size-large": calc(1.5rem + 5vw),
+  "font-size-xlarge": calc(2.5rem + 5vw),
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Break Points *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$break-points: (
+  "break-point-small": 399px,
+  "break-point-medium": 575px,
+  "break-point-large": 767px,
+  "break-point-tablet": 991px,
+  "break-point-desktop": 1199px,
+);
+
+@function break-point($break-point-limit) {
+  @return map-get($break-points, $break-point-limit);
+}

@@ -1,0 +1,58 @@
+:root {
+  font-size: 62.5%;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-background-main);
+  overflow: overlay;
+}
+
+.container-custom {
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr [center-start] repeat(
+      6,
+      [col-start] minmax(min-content, 16.66667rem) [col-end]
+    )
+    [center-end] 1fr [container-end];
+  grid-template-rows: min-content;
+}
+
+li {
+  list-style: none;
+}
+
+.linkAppreance,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-active);
+  font-weight: font-weight(font-weight-light);
+  font-size: font-size(font-size-small);
+  cursor: pointer;
+
+  &:hover{
+    color: var(--color-hover);
+  }
+}
+
+i {
+  color: var(--color-background-main);
+  font-size: font-size(font-size-medium);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
